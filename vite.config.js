@@ -66,7 +66,10 @@ export default defineConfig({
         ]
       },
       workbox: {
-        navigateFallback: 'index.html'
+        navigateFallback: 'index.html',
+        disableDevLogs: true,
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globIgnores: ['**/node_modules/**/*']
       },
       devOptions: {
         enabled: true,
